@@ -5,7 +5,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.6.2'
-        classpath 'com.novoda:bintray-release:0.8.0'
+        classpath 'com.novoda:bintray-release:0.9.2'
     }
 }
 
@@ -21,17 +21,17 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-ext {
-    userOrg = 'yarolegovich'
-    groupId = 'com.yarolegovich'
-    uploadName = 'DiscreteScrollView'
-    description = 'A scrollable list of items that centers the current element and provides easy-to-use APIs for cool item animations.'
-    publishVersion = '1.4.9'
-    licences = ['Apache-2.0']
-
-    compileSdkVersion = 27
-    buildToolsVersion = '26.0.2'
-    targetSdkVersion = 27
-
-    supportLibVersion = '27.1.1'
-}
+//ext {
+//    userOrg = 'yarolegovich'
+//    groupId = 'com.yarolegovich'
+//    uploadName = 'DiscreteScrollView'
+//    description = 'A scrollable list of items that centers the current element and provides easy-to-use APIs for cool item animations.'
+//    publishVersion = '1.4.9'
+//    licences = ['Apache-2.0']
+//
+//    compileSdkVersion = 27
+//    buildToolsVersion = '26.0.2'
+//    targetSdkVersion = 27
+//
+//    supportLibVersion = '27.1.1'
+//}

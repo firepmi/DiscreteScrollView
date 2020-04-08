@@ -2,12 +2,13 @@ package com.yarolegovich.discretescrollview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.IntRange;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.annotation.IntRange;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.yarolegovich.discretescrollview.transform.DiscreteScrollItemTransformer;
 import com.yarolegovich.discretescrollview.util.ScrollListenerAdapter;
@@ -18,7 +19,7 @@ import java.util.List;
 /**
  * Created by yarolegovich on 18.02.2017.
  */
-@SuppressWarnings("unchecked")
+
 public class DiscreteScrollView extends RecyclerView {
 
     public static final int NO_POSITION = DiscreteScrollLayoutManager.NO_POSITION;

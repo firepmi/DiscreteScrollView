@@ -1,15 +1,16 @@
 package com.yarolegovich.discretescrollview.sample.shop;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.snackbar.Snackbar;
 import com.yarolegovich.discretescrollview.DiscreteScrollView;
 import com.yarolegovich.discretescrollview.InfiniteScrollAdapter;
 import com.yarolegovich.discretescrollview.DSVOrientation;
@@ -40,13 +41,13 @@ public class ShopActivity extends AppCompatActivity implements DiscreteScrollVie
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
 
-        currentItemName = (TextView) findViewById(R.id.item_name);
-        currentItemPrice = (TextView) findViewById(R.id.item_price);
-        rateItemButton = (ImageView) findViewById(R.id.item_btn_rate);
+        currentItemName = findViewById(R.id.item_name);
+        currentItemPrice = findViewById(R.id.item_price);
+        rateItemButton = findViewById(R.id.item_btn_rate);
 
         shop = Shop.get();
         data = shop.getData();
-        itemPicker = (DiscreteScrollView) findViewById(R.id.item_picker);
+        itemPicker = findViewById(R.id.item_picker);
         itemPicker.setOrientation(DSVOrientation.HORIZONTAL);
         itemPicker.addOnItemChangedListener(this);
         infiniteAdapter = InfiniteScrollAdapter.wrap(new ShopAdapter(data));
